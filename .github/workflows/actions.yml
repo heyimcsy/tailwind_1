@@ -5,10 +5,16 @@ jobs:
   push-job:
     runs-on: ubuntu-latest
     steps:
-      - name: 첫 번째 작업
-        run: echo "첫 번째 작업 실행 중"
+      - name: Github Repository 파일 불러오기
+        uses: actions/checkout@v5
 
-      - name: 여러 명령어 문장 작성하기
-        run: |
-          echo "이건 첫 번째 레슨"
-          echo "좋은 건 너만 알기 ~~~"
+      - name: Node.js 설치하기
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: 의존성(라이브러리) 설치
+        run: npm ci
+
+      - name: 테스트 실행하기
+        run: npm run test
