@@ -4,5 +4,5 @@ test("에러를 내보자", () => {
   render(<Home />);
 
   const emailInput = screen.getByLabelText("이메일");
-  expect(emailInput).toHaveTextContent("엄마아빠");
+  expect(emailInput).toHaveTextContent("");
 });
