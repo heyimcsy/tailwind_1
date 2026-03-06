@@ -89,10 +89,10 @@ export const LoginForm = () => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 w-80 p-6 bg-white"
+        className="flex w-80 flex-col gap-4 bg-white p-6"
       >
         <div>
-          <label htmlFor="email" className="block mb-2">
+          <label htmlFor="email" className="mb-2 block">
             이메일
           </label>
           <Input
@@ -108,7 +108,7 @@ export const LoginForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="password" className="block mb-2">
+          <label htmlFor="password" className="mb-2 block">
             비밀번호
           </label>
           <Input
@@ -125,19 +125,19 @@ export const LoginForm = () => {
         </div>
         <button
           disabled={!values.email || !values.password}
-          className="bg-blue-500 rounded-md w-full cursor-pointer p-2 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full cursor-pointer rounded-md bg-blue-500 p-2 text-white disabled:cursor-not-allowed disabled:opacity-50"
         >
           로그인
         </button>
       </form>
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-400">
-          <div className="bg-white p-6 rounded-md">
+          <div className="rounded-md bg-white p-6">
             <h2 className="text-lg font-semibold">로그인 성공</h2>
             <p>환영합니다!</p>
             <button
               onClick={() => setShowModal(false)}
-              className="mt-4 bg-blue-500 text-white rounded-md px-4 py-2"
+              className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white"
             >
               닫기
             </button>
