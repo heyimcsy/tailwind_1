@@ -1,7 +1,5 @@
 name: Github Action 연습하기
-on:
-  push: pull-request
-
+on: pull_request
 jobs:
   push-job:
     runs-on: ubuntu-latest
