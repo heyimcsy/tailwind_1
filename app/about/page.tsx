@@ -8,7 +8,7 @@ export default function About() {
         <h1>About 페이지</h1>
       </div>
       <Link className="text-blue-500 underline" href="/">
-        홈으로 넘어가자
+        홈으로 넘어가자dydy
       </Link>
     </>
   );
