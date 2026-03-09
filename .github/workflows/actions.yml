@@ -1,5 +1,9 @@
 name: Github Action 연습하기
-on: push
+on:
+  push:
+    branches:
+      - main
+      - dev
 
 jobs:
   push-job:
